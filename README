@@ -1,0 +1,34 @@
+
+Mocanu-Prejma Vladimir-Georgian
+325CB
+
+								Tema 2 PA
+
+Am folosit scheletul de la laborator(pentru citire, scriere, si get_result),
+tema a fost scrisa in limbajul C++. Am implementat primele 2 probleme.
+
+
+Problema 1:
+	O sa folosim 2 vectori pentru a memora distanta. Unul dintre ei o sa il sortam
+pentru a afla daca se poate construi graf-ul. Daca gasim 2 distante consecutive
+a caror diferenta este mai mare de 1, inseamna ca nu putem construi graful.
+Asa se intampla si daca gasim o distanta egala cu 0, in afara de prima distanta.
+	Parcurgem vectorul de distante(si ala sortat) verificam daca putem construi
+graful, daca da, cautam prima data distantele cu 1, si le bagam in coada impreuna
+cu parintele. Dupa cautam distantele cu 2, dupa cu 3 si tot asa. 
+	Dupa ce terminam de parcurs vectorul si luam toate distantele, o sa avem 
+o bucla while pentru afisare.Prima data afisam numarul de muchii.
+Cat timp mai avem elemente in coada, scoatem cate 2 elemente(nodul parinte-nod)
+si le afisam(scriem in fisier). 
+
+
+Problema 2:
+	O sa avem o matrice (vector de vectori) in care o sa retinem numerele citite din fisier.
+Parcurgem matricea si apelam pentru fiecare element din ea(daca nu a fost vizitat) functia 
+vecini(). Contorul o sa inceapa de la 0, dupa ce iese din functia vecini() marcam ca am vizitat
+nodul si verificam daca am gasit un contor mai mare decat cel de pana acum si il retinem.
+	In functia vecini() vedem daca elementul respectiv are vecini(sus, jos, stanga, dreapta) care
+sa corespunda cerintelor(sa fie intre element si elemnt+k). Daca gasim vecini, apelam din nou functia
+variabila element ramane tot la aceasi valoare(valoare cu care am aplecat in get_result). 
+	Dupa ce terminam de parcurs matricea si apelam pentru fiecare element functia vecini,
+afisam contorMax care este aria maxima pe care am gasit-o.
